@@ -1,0 +1,43 @@
+/* @font-face {
+    font-family: 'Museo Sans Cyrl';
+    src: local('Museo Sans Cyrl 500'),
+     local('MuseoSansCyrl-500'),
+        url('../fonts/Museosanscyrl500.woff2') format('woff2'),
+        url('../fonts/Museosanscyrl500.woff') format('woff'),
+        url('../fonts/Museosanscyrl500.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+} */
+@font-face {
+	font-family: 'Museo Sans Cyrl 500';
+	src: url('MuseoSansCyrl-500.eot');
+	src: local('MuseoSansCyrl-500'),
+		url('../fonts/MuseoSansCyrl-500.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/MuseoSansCyrl-500.woff') format('woff'),
+		url('../fonts/MuseoSansCyrl-500.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('Gilroy-Black.eot');
+    src: local('Gilroy Black'), local('Gilroy-Black'),
+        url('../fonts/Gilroy-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Black.woff') format('woff'),
+        url('../fonts/Gilroy-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+	font-display: swap;
+}
+@font-face {
+    font-family: 'Gilroy Medium';
+    src: url('Gilroy-Medium.eot');
+    src: local('Gilroy Medium'), local('Gilroy-Medium'),
+        url('../fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Medium.woff') format('woff'),
+        url('../fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+	font-display: swap;
+}
