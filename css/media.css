@@ -85,23 +85,8 @@
         margin: 0;
         padding: 10px 0;
     }
-    .main-form__des {
-        font-size: 14px;
-        margin: 0;
-        padding: 10px 0;
-    }
-    .form-list-item-btn {
-        font-size: 14px;
-        padding: 16px 0;
-    }
     .form-text {
         font-size: 14px;
-    }
-    .form-list-item-btn-telegram::before,
-    .form-list-item-btn-facebook::before,
-    .form-list-item-btn-viber::before {
-        width: 20px;
-        height: 20px;
     }
     .advantage-title {
         font-size: 36px;
@@ -376,6 +361,9 @@
         position: static;
         width: 100%;
         margin-bottom: 40px;
+    }
+    .main-form__title {
+        padding: 0 10px;
     }
     .main-content__des,
     .main-content__title {

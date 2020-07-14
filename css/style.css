@@ -182,6 +182,7 @@ label {
     margin-bottom: 10px;
 }
 .input {
+    position: relative;
     display: block;
     width: 100%;
     margin-top: 8px;
@@ -190,13 +191,18 @@ label {
     border: none;
     color: #505050;
     border-radius: 4px;
+    box-sizing: border-box;
+}
+.input-error {
+    border: 1px solid #FF7979;
+    box-sizing: border-box;
 }
 .form-btn {
     display: block;
     width: 100%;
     margin-top: 20px;
     padding: 16px 0;
-    font-size: 12px;
+    font-size: 14px;
     outline: none;
     border: none;
     text-align: center;
@@ -210,7 +216,9 @@ label {
     position: relative;
     font-weight: 600;
     font-size: 18px;
-    padding: 0 30px;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 20px;
     text-align: center;
     color: #333333;
     opacity: 0.8;
@@ -218,7 +226,7 @@ label {
 .form-text::before {
     position: absolute;
     content: "";
-    left: 10%;
+    left: -20px;
     top: 50%;
     transform: translateY(-40%);
     width: 25px;

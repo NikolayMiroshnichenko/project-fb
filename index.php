@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/intlTelInput.css">
     <!-- Google Tag Manager -->
     <script>
         (function(w, d, s, l, i) {
@@ -81,15 +82,6 @@
                         <input type="hidden" name="utm_content" value="<?php echo isset($_GET['utm_content']) ? $_GET['utm_content'] : '' ;?>">
                         <input type="hidden" name="utm_term" value="<?php echo isset($_GET['utm_term']) ? $_GET['utm_term'] : '' ;?>">
                         <input type="hidden" name="pixel" value="<?php echo isset($_GET['utm_pixel']) ? $_GET['utm_pixel'] : '' ;?>">
-                        <!-- <li class="form-list-item">
-                            <a id="complreg" href="viber://pa?context=ZGw6MzE5Mw&chatURI=protargeting" class="deep-link form-list-item-btn form-list-item-btn-viber btn">Viber</a>
-                        </li>
-                        <li class="form-list-item">
-                            <a id="complreg" href="tg://resolve?start=ZGw6MzE5Mw&domain=protargeting_intensiv_bot" class="deep-link form-list-item-btn form-list-item-btn-telegram btn">Telegram</a>
-                        </li>
-                        <li class="form-list-item">
-                            <a id="complreg" href="https://m.me/ProTargeting.team?ref=dynRef--utm_source|<?php echo isset($_GET['utm_source']) ? $_GET['utm_source'] : 'Нет' ;?>~utm_medium|<?php echo isset($_GET['utm_medium']) ? $_GET['utm_medium'] : 'Нет' ;?>~utm_campaign|<?php echo isset($_GET['utm_campaign']) ? $_GET['utm_campaign'] : 'Нет' ;?>~utm_content|<?php echo isset($_GET['utm_content']) ? $_GET['utm_content'] : 'Нет' ;?>~utm_term|<?php echo isset($_GET['utm_term']) ? $_GET['utm_term'] : 'Нет' ;?>~utm_pixel|<?php echo isset($_GET['utm_pixel']) ? $_GET['utm_pixel'] : 'Нет' ;?>~_fbp|<?php echo isset($_COOKIE['_fbp']) ? $_COOKIE['_fbp'] : 'Нет' ;?>~_ga|<?php echo isset($_COOKIE['_ga']) ? $_COOKIE['_ga'] : 'Нет' ;?>" class="form-list-item-btn form-list-item-btn-facebook btn">Facebook</a>
-                        </li> -->
                         <form action="" class="form">
                             <label>
                                 Ваше имя
@@ -97,11 +89,11 @@
                             </label>
                             <label>
                             Ваш e-mail
-                                <input type="email" class="input" placeholder="Введите Ваш e-mail">
+                                <input type="email" name="email" class="input" placeholder="Введите Ваш e-mail">
                             </label>
                             <label>
                             Ваш телефон
-                                <input type="tel" class="input" placeholder="Введите Ваш номер телефона">
+                                <input type="tel" id="phone" class="input" placeholder="Введите Ваш номер телефона">
                             </label>
                             <button type="submit" class="form-btn">Принять участие</button>
                         </form>
@@ -266,6 +258,8 @@
     <script src="js/timer.js"></script>
     <script src="js/anchors.js"></script>
     <script src="https://customer.smartsender.eu/js/client/dl.min.js"></script>
+    <script src="js/intlTelInput.js"></script>
+    <script src="js/utils.js"></script>
     <script src="js/send.js"></script>
 
     <script>

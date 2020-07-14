@@ -1,31 +1,55 @@
-$(document).ready(function($) {
+const inputValidator = document.querySelectorAll( ".input" );
+
+inputValidator.forEach(item => {
+    item.addEventListener('input', (e) => {
+        if(e.target.value == "") {
+            e.target.classList.add('input-error');
+            return;
+        }
+
+        e.target.classList.remove('input-error');
+    })
+})
 
 
 
-    var modal = new tingle.modal({
-       footer: !1,
-       stickyFooter: !1,
-       cssClass: ["custom-class-1", "custom-class-2"],
-       beforeOpen: function() {
-        $("form").submit(function(event) {
-                       var th = $(this);
-                       
-                       $.ajax({
-                           type: "POST",
-                           url: "https://webinar.protargeting.team/success/send.php",
-                           data: th.serialize(),
-                           success: function() {
-   
-                           var url = "https://www.liqpay.ua/api/3/checkout?data=eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXkiLCJwdWJsaWNfa2V5IjoiaTI5NzYyMjMwOTMzIiwiYW1vdW50IjoiNSIsImN1cnJlbmN5IjoiVVNEIiwiZGVzY3JpcHRpb24iOiLQntC%2F0LvQsNGC0LAg0LLQuNC00LXQviDQt9Cw0L%2FQuNGB0YwgLSDQoNCw0LHQvtGC0LAg0JDQu9Cz0L7RgNC40YLQvNCwIEZhY2Vib29rIiwidHlwZSI6ImJ1eSIsImxhbmd1YWdlIjoicnUifQ%3D%3D&signature=%2Fh00LNBPy%2BxTPVDPnVS3Ojg%2B5mU%3D";
-                           $(location).attr('href',url);
-   
-                           setTimeout(function() {
-                               th.trigger("reset");
-                           }, 1000);
-                        
-                           
-   
-                       }
-                   });
-                       event.preventDefault();
-                   });
+
+
+
+
+// Проверка номера!
+const input = document.querySelector( "#phone" );
+
+window.intlTelInput( input, {
+    utilsScript: 'js/utils.js',
+    defaultCountry: 'auto',
+    separateDialCode: true,
+    allowDropdown: false,
+    customPlaceholder: function ( selectedCountryPlaceholder, selectedCountryData ) {
+        return "";
+    },
+    geoIpLookup: function ( callback ) {
+        $.get( "https://ipinfo.io", function () { }, "jsonp" ).always( function ( resp ) {
+            var countryCode = ( resp && resp.country ) ? resp.country : "";
+            callback( countryCode );
+        } );
+    },
+    nationalMode: false,
+    initialCountry: 'auto',
+
+    preferredCountries: ['ua', 'ru', 'by', 'kz']
+
+} );
+
+input.addEventListener( 'focus', codeCauntry )
+
+function codeCauntry( e ) {
+    const countryData = document.querySelector( '.iti__selected-dial-code' ).textContent;
+
+    if ( input.value !== "" ) return;
+    input.value = countryData;
+}
+
+
+
+
